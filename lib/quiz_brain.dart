@@ -8,10 +8,14 @@ class QuizBrain {
     Questions('Is Duck can\'t fly?', true),
   ];
 
-  nextQ() {
+  bool nextQ() {
     if (_qCount < _questions.length - 1) {
       _qCount = _qCount + 1;
+      return true;
+    } else {
+      return false;
     }
+
   }
 
   String getQText() {
